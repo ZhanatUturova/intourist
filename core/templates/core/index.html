@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block page %}
+    <h2>Добро пожаловать {{ request.user.username }}!</h2>
+    <!-- Строку 'profile' мы взяли из urls.py - name='profile' -->
+    <div>Вот ваш профиль: <a href="{% url 'profile' %}">КЛИК!</a></div>     
+{% endblock %}

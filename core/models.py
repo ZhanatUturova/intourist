@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Profile(models.Model):
     user = models.OneToOneField(
-        to=User, on_delete=models.CASCADE,
+        to=User, on_delete=models.CASCADE,      # CASCADE - если удален юзер, то и профайл тоже удаляется
         related_name='profile'
     )
     region = models.CharField(max_length=1, choices=(
