@@ -14,6 +14,7 @@ class Place(models.Model):
     updated_at = models.DateField(auto_now=True)
     views_count = models.IntegerField(default=0)
     is_publicated = models.BooleanField(default=True)
+    img = models.ImageField(upload_to='places', null=True, blank=True)
 
     def __str__(self) -> str:
         return self.name
